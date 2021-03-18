@@ -1,0 +1,51 @@
+/* секция приимущества студии */
+
+.quality {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.quality-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.element {
+    margin-right: 30px;
+    width: 270px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.element__card {
+    width: 270px;
+    height: 120px;
+    background-color: var(--button-color);
+    border-radius: 4px;
+    margin-bottom: 33px;
+    background-position: center;
+}
+
+.element__icon {
+    width: 70px;
+    height: 70px;
+    margin: 25px 100px;
+}
+
+.element__title {
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--secont-text-color);
+    text-transform: uppercase;
+}
+
+.element__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 2;
+    color: var(--notactiv-color);
+}

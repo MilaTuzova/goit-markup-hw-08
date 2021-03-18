@@ -1,0 +1,94 @@
+/* Секция НАША КОМАНДА */
+
+.team-section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+    background-color: var(--button-color);
+}
+
+.team-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.team {
+    background-color: var(--primary-white-color);
+    margin-right: 30px;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.team__img {
+    display: block;
+    width: 270px;
+}
+
+.team__name {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--secont-text-color);
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.team__class {
+    padding-bottom: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--notactiv-color);
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+
+/* соцсети в команде */
+
+.list-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 206px;
+    height: 44px;
+    margin: 0px 32px 30px;
+}
+
+.icon-social {
+    display: block;
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.icon-social__link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    padding: 12px 12px;
+    color: var(--social-color);
+    transition: background-color var(--time-duration) var(--cubic-time);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}
+
+.icon-social__item {
+    fill: var(--social-color);
+    transition: fill var(--time-duration) var(--cubic-time);
+    .icon-social__link:hover &,
+    .icon-social__link:focus & {
+        fill: var(--primary-white-color);
+    }
+}

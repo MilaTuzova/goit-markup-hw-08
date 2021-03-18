@@ -1,0 +1,68 @@
+/* главная секция */
+
+.section-main {
+    text-align: center;
+    background-color: var(--footer-backgr-color);
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media screen and (max-width: 1200px) {
+        padding-top: 118px;
+        padding-bottom: 118px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 210px;
+    }
+}
+
+.section-main__title {
+    display: block;
+    margin: 0 auto;
+    font-weight: 900;
+    color: var(--primary-white-color);
+    letter-spacing: 0.06em;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+    @media screen and (max-width: 1200px) {
+        width: 360px;
+        font-size: 26px;
+        line-height: 1.615;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 696px;
+        font-size: 44px;
+        line-height: 1.363;
+    }
+}
+
+.section-main__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 200px;
+    min-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    transition: color var(--time-duration) var(--cubic-time);
+}
+
+.section-main__button:hover,
+.section-main__button:focus {
+    color: var(--primary-text-color);
+}

@@ -1,0 +1,237 @@
+/* Модалка */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity var(--time-duration) var(--cubic-time);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: var(--time-duration) var(--cubic-time);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity var(--time-duration) var(--cubic-time), transform var(--time-duration) var(--cubic-time);
+    min-width: 528px;
+    min-height: 581px;
+    background-color: var(--primary-white-color);
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--social-color);
+    border-radius: 50%;
+    fill: var(--primary-text-color);
+    background-color: var(--primary-white-color);
+    transition: fill var(--time-duration) var(--cubic-time);
+}
+
+.modal__close:hover .modal__svg,
+.modal__close:focus .modal_svg {
+    fill: var(--accent-color);
+}
+
+
+/* форма оставьте свои данные */
+
+.field {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 528px;
+    height: 581px;
+    padding: 37px 41px 43px 39px;
+}
+
+.field__text {
+    margin-bottom: 2px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form__input {
+    position: relative;
+    width: 448px;
+    height: 40px;
+    padding-left: 42px;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: border-color var(--time-duration) var(--cubic-time);
+}
+
+.form:hover .form__input,
+.form:focus .form__input {
+    border-color: var(--accent-color);
+}
+
+.form__name {
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.1666;
+    letter-spacing: 0.01em;
+    color: var(--notactiv-color);
+}
+
+.form__svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(12px, -11px);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    fill: var(--primary-text-color);
+    transition: fill var(--time-duration) var(--cubic-time);
+}
+
+.form:focus-within .form__svg,
+.form:hover .form__svg {
+    fill: var(--accent-color);
+}
+
+.form__svg:hover,
+.form__svg:focus {
+    fill: var(--accent-color);
+}
+
+.form-textarea {
+    width: 448px;
+    height: 120px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    resize: none;
+    padding: 16px 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1428;
+    letter-spacing: 0.01em;
+    transition: border-color var(--time-duration) var(--cubic-time);
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+    }
+}
+
+.form-textarea::placeholder {
+    color: var(--placeholder-color);
+    transition: color var(--time-duration) var(--cubic-time);
+    .form:hover &,
+    .form:focus-within & {
+        color: var(--accent-color);
+    }
+}
+
+
+/* чекбокс */
+
+.agreement {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 423px;
+    height: 24px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.checkbox__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.checkbox {
+    width: 423px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--notactiv-color);
+    padding-left: 19px;
+}
+
+.checkbox_agree {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.checkbox__svg {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 15px;
+    background-color: var(--primary-white-color);
+    fill: var(--primary-white-color);
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+    transition: background-color var(--time-duration) var(--cubic-time), border-color var(--time-duration) var(--cubic-time);
+    .checkbox__input:checked+& {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+    .checkbox__input:focus+&,
+    .checkbox__input:hover+& {
+        border-color: var(--accent-color);
+    }
+}
+
+.button-send {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding: 10px 55px 10px 56px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    color: var(--button-color);
+    transition: color var(--time-duration) var(--cubic-time), color var(--time-duration) var(--cubic-time);
+    &:focus,
+    &:hover {
+        color: var(--primary-text-color);
+    }
+}
