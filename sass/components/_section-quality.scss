@@ -1,31 +1,48 @@
 /* секция приимущества студии */
 
 .quality {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .quality-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    / @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .element {
-    margin-right: 30px;
-    width: 270px;
-    &:last-child {
-        margin-right: 0;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 354px;
+        margin-bottom: 30px;
+        &:nth-child(2n + 1) {
+            margin-right: 30px;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        width: 270px;
     }
 }
 
 .element__card {
-    width: 270px;
-    height: 120px;
     background-color: var(--button-color);
     border-radius: 4px;
-    margin-bottom: 33px;
+    margin-bottom: 30px;
     background-position: center;
+    text-align: center;
 }
 
 .element__icon {
@@ -41,6 +58,10 @@
     line-height: 1.2;
     color: var(--secont-text-color);
     text-transform: uppercase;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
 }
 
 .element__text {
