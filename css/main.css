@@ -103,6 +103,13 @@ img {
   margin-bottom: 50px;
 }
 
+@media screen and (max-width: 1199px) {
+  .title-section {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
 :root {
   --primary-text-color: #000000;
   --secont-text-color: #212121;
@@ -117,8 +124,7 @@ img {
   --time-duration: 250ms;
   --border-color: rgba(33, 33, 33, 0.2);
   --placeholder-color: rgba(117, 117, 117, 0.5);
-  --background-color-link: rgba(255, 255, 255, 0.1)
-;
+  --background-color-link: rgba(255, 255, 255, 0.1);
 }
 
 /* шапка страницы*/
@@ -695,9 +701,112 @@ img {
   color: var(--primary-text-color);
 }
 
+/* секция приимущества студии */
+.quality {
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .quality {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .quality-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .quality-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .element {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .element {
+    width: 354px;
+    margin-bottom: 30px;
+  }
+  .element:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .element {
+    width: 270px;
+  }
+}
+
+.element__card {
+  background-color: var(--button-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-position: center;
+  text-align: center;
+}
+
+.element__icon {
+  width: 70px;
+  height: 70px;
+  margin: 25px 100px;
+}
+
+.element__title {
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--secont-text-color);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .element__title {
+    text-align: left;
+  }
+}
+
+.element__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2;
+  color: var(--notactiv-color);
+}
+
 /* секция карточек Чем занимаются и Команда*/
 .cards-work {
   padding-bottom: 94px;
+}
+
+@media screen and (max-width: 1200px) {
+  .cards-work {
+    display: none;
+  }
 }
 
 .cards {
@@ -751,22 +860,41 @@ img {
   background-color: var(--button-color);
 }
 
-.team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (max-width: 1199px) {
+  .team-section {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .team {
+  padding-bottom: 30px;
   background-color: var(--primary-white-color);
-  margin-right: 30px;
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -776,9 +904,37 @@ img {
   margin-right: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .team {
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+  }
+  .team:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .team {
+    width: 354px;
+  }
+  .team:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+  .team:nth-child(-n + 2) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    width: 270px;
+    padding-bottom: 30px;
+  }
+}
+
 .team__img {
   display: block;
-  width: 270px;
 }
 
 .team__name {
@@ -793,7 +949,7 @@ img {
 }
 
 .team__class {
-  padding-bottom: 30px;
+  padding-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
@@ -811,12 +967,34 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 206px;
-  height: 44px;
-  margin: 0px 32px 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .list-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list-icon {
+    margin: 0;
+  }
 }
 
 .icon-social {
