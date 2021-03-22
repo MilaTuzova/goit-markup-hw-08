@@ -1,48 +1,88 @@
 /* Наши клиенты */
 
 .clients-section {
-    padding-bottom: 94px;
-    padding-top: 94px;
+    @media screen and (max-width: 1199px) {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 94px;
+        padding-top: 94px;
+    }
 }
 
 .clients-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 90px;
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .client {
-    display: block;
-    width: 170px;
+    display: inline-block;
     height: 90px;
-    margin-right: 30px;
-    &:last-child {
-        margin-right: 0;
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        margin-bottom: 30px;
+        &:nth-child(2n + 1) {
+            margin-right: 30px;
+        }
+        &:nth-child(n + 5) {
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 226px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        &:nth-child(3n + 3) {
+            margin-right: 0;
+        }
+        &:nth-child(n + 4) {
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        width: 170px;
+        margin-right: 30px;
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 
 .client__link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
+    display: inline-block;
+    height: 90px;
+}
+
+.client__icon {
+    display: inline-block;
     height: 90px;
     cursor: pointer;
     border: 1px solid var(--social-color);
     border-radius: 4px;
-    transition: border var(--time-duration) var(--cubic-time);
+    fill: var(--social-color);
+    transition: fill var(--time-duration) var(--cubic-time), border var(--time-duration) var(--cubic-time);
     &:focus,
     &:hover {
         border-color: var(--accent-color);
     }
-}
-
-.client__icon {
-    fill: var(--social-color);
-    transition: fill var(--time-duration) var(--cubic-time);
     .client__link:hover &,
     .client__link:focus & {
         fill: var(--accent-color);
+    }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        width: 210px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 226px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 170px;
     }
 }
