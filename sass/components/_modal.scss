@@ -25,11 +25,17 @@
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     transition: opacity var(--time-duration) var(--cubic-time), transform var(--time-duration) var(--cubic-time);
-    min-width: 528px;
-    min-height: 581px;
     background-color: var(--primary-white-color);
     border-radius: 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    @media screen and (max-width: 1199px) {
+        width: 450px;
+        height: 609px;
+    }
+    @media screen and (min-width: 1200px) {
+        min-width: 528px;
+        min-height: 581px;
+    }
 }
 
 .modal__close {
@@ -66,8 +72,15 @@
     margin-bottom: 2px;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.2;
     text-align: center;
+    @media screen and (max-width: 1199px) {
+        line-height: 1.5;
+        width: 370px;
+        height: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+        line-height: 1.2;
+    }
 }
 
 .form {
@@ -79,13 +92,18 @@
 
 .form__input {
     position: relative;
-    width: 448px;
-    height: 40px;
     padding-left: 42px;
+    height: 40px;
     cursor: pointer;
     border: 1px solid var(--border-color);
     border-radius: 4px;
     transition: border-color var(--time-duration) var(--cubic-time);
+    @media screen and (max-width: 1199px) {
+        width: 370px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 448px;
+    }
 }
 
 .form:hover .form__input,
@@ -126,7 +144,6 @@
 }
 
 .form-textarea {
-    width: 448px;
     height: 120px;
     margin-bottom: 20px;
     border: 1px solid var(--border-color);
@@ -141,6 +158,12 @@
     &:hover,
     &:focus {
         border-color: var(--accent-color);
+    }
+    @media screen and (max-width: 1199px) {
+        width: 370px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 448px;
     }
 }
 
@@ -159,12 +182,12 @@
 .agreement {
     position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 423px;
+    justify-content: flex-start;
     height: 24px;
-    margin-right: auto;
-    margin-left: auto;
+    padding-left: 7px;
+    @media screen and (max-width: 1199px) {
+        padding-left: 22px;
+    }
 }
 
 .checkbox__input {
@@ -176,12 +199,18 @@
 }
 
 .checkbox {
-    width: 423px;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
     color: var(--notactiv-color);
-    padding-left: 19px;
+    @media screen and (max-width: 1199px) {
+        font-size: 12px;
+        line-height: 1.1666;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 423px;
+        font-size: 14px;
+        line-height: 1.7;
+        padding-left: 19px;
+    }
 }
 
 .checkbox_agree {
@@ -191,8 +220,6 @@
 
 .checkbox__svg {
     position: absolute;
-    top: 4px;
-    left: 0;
     width: 16px;
     height: 15px;
     background-color: var(--primary-white-color);
@@ -207,6 +234,14 @@
     .checkbox__input:focus+&,
     .checkbox__input:hover+& {
         border-color: var(--accent-color);
+    }
+    @media screen and (max-width: 1199px) {
+        top: 0px;
+        left: 0px;
+    }
+    @media screen and (min-width: 1200px) {
+        top: 4px;
+        left: 0;
     }
 }
 

@@ -1684,12 +1684,24 @@ img {
   transition: opacity var(--time-duration) var(--cubic-time), -webkit-transform var(--time-duration) var(--cubic-time);
   transition: opacity var(--time-duration) var(--cubic-time), transform var(--time-duration) var(--cubic-time);
   transition: opacity var(--time-duration) var(--cubic-time), transform var(--time-duration) var(--cubic-time), -webkit-transform var(--time-duration) var(--cubic-time);
-  min-width: 528px;
-  min-height: 581px;
   background-color: var(--primary-white-color);
   border-radius: 4px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal__close {
@@ -1732,8 +1744,21 @@ img {
   margin-bottom: 2px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.2;
   text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .field__text {
+    line-height: 1.5;
+    width: 370px;
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .field__text {
+    line-height: 1.2;
+  }
 }
 
 .form {
@@ -1752,14 +1777,25 @@ img {
 
 .form__input {
   position: relative;
-  width: 448px;
-  height: 40px;
   padding-left: 42px;
+  height: 40px;
   cursor: pointer;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   -webkit-transition: border-color var(--time-duration) var(--cubic-time);
   transition: border-color var(--time-duration) var(--cubic-time);
+}
+
+@media screen and (max-width: 1199px) {
+  .form__input {
+    width: 370px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form__input {
+    width: 448px;
+  }
 }
 
 .form:hover .form__input,
@@ -1802,7 +1838,6 @@ img {
 }
 
 .form-textarea {
-  width: 448px;
   height: 120px;
   margin-bottom: 20px;
   border: 1px solid var(--border-color);
@@ -1819,6 +1854,18 @@ img {
 
 .form-textarea:hover, .form-textarea:focus {
   border-color: var(--accent-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .form-textarea {
+    width: 370px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-textarea {
+    width: 448px;
+  }
 }
 
 .form-textarea::-webkit-input-placeholder {
@@ -1871,16 +1918,17 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 423px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   height: 24px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-left: 7px;
+}
+
+@media screen and (max-width: 1199px) {
+  .agreement {
+    padding-left: 22px;
+  }
 }
 
 .checkbox__input {
@@ -1892,12 +1940,24 @@ img {
 }
 
 .checkbox {
-  width: 423px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
   color: var(--notactiv-color);
-  padding-left: 19px;
+}
+
+@media screen and (max-width: 1199px) {
+  .checkbox {
+    font-size: 12px;
+    line-height: 1.1666;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox {
+    width: 423px;
+    font-size: 14px;
+    line-height: 1.7;
+    padding-left: 19px;
+  }
 }
 
 .checkbox_agree {
@@ -1907,8 +1967,6 @@ img {
 
 .checkbox__svg {
   position: absolute;
-  top: 4px;
-  left: 0;
   width: 16px;
   height: 15px;
   background-color: var(--primary-white-color);
@@ -1927,6 +1985,20 @@ img {
 .checkbox__input:focus + .checkbox__svg,
 .checkbox__input:hover + .checkbox__svg {
   border-color: var(--accent-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .checkbox__svg {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox__svg {
+    top: 4px;
+    left: 0;
+  }
 }
 
 .button-send {
