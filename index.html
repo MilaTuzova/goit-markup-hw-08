@@ -53,83 +53,13 @@
                 </li>
             </ul>
 
-            <!-- кнопка меню мобильного меню-->
-            <button type="button" class="nav-button is-open">
-          <svg
-            class="nav-button__icon"
-            width="40"
-            height="40"
-            aria-expanded="false"
-            aria-label="Переключатель мобильного меню"
-          >
-            <use
-              class="nav-button__icon__menu js-open-menu"
-              href="./images/icons.svg#header-menu"
-            ></use>
-            <use
-              class="nav-button__icon__cross js-close-menu"
-              href="./images/icons.svg#header-x"
-            ></use>
+            <!-- кнопка мобильного меню-->
+            <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg class="menu-toggle__icon" width="40" height="40">
+            <use href="./images/icons.svg#header-menu"></use>
           </svg>
         </button>
 
-            <!-- мобильное меню-->
-            <div class="mobil-container is-open">
-                <div class="mobil-menu">
-                    <ul class="mobil__list">
-                        <li>
-                            <a class="mobil__menu" href="./index.html">Студия</a>
-                        </li>
-                        <li>
-                            <a class="mobil__portfolio" href="./portfolio.html">Портфолио</a
-                >
-              </li>
-              <li><a class="mobil__contacts" href="">Контакты</a></li>
-                    </ul>
-                </div>
-
-                <div class="mobil-footer">
-                    <div class="mobil-info">
-                        <ul class="mobil-info__list">
-                            <li class="mobil-info__list__item">
-                                <a href="tel:+380961111111" class="mobil-info__list__tel">
-                    +38 096 111 11 11
-                  </a>
-                            </li>
-                            <li class="mobil-info__list__item">
-                                <a href="mailto:info@devstudio.com" class="mobil-info__list__mail">
-                    info@devstudio.com
-                  </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="mobil-social">
-                        <ul class="mobil-social__list">
-                            <li class="mobil-social__item">
-                                <a href="https://www.instagram.com" class="mobil-social__link">
-                    Instagram
-                  </a>
-                            </li>
-                            <li class="mobil-social__item">
-                                <a href="https://www.twitter.com" class="mobil-social__link">
-                    Twitter
-                  </a>
-                            </li>
-                            <li class="mobil-social__item">
-                                <a href="https://www.facebook.com" class="mobil-social__link">
-                    Facebook
-                  </a>
-                            </li>
-                            <li class="mobil-social__item">
-                                <a href="https://www.linkedin.com" class="mobil-social__link">
-                    LinkedIn
-                  </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </header>
 
@@ -523,6 +453,69 @@
     </footer>
 
 
+    <!-- мобильное меню-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button type="button" class="button-mobil js-close-menu">
+        <svg class="button-mobil__icon" width="40" height="40">
+          <use
+            class="button-mobil__icon__cross"
+            href="./images/icons.svg#header-x"
+          ></use>
+        </svg>
+      </button>
+        <div class="mobil-menu-area">
+            <div class="mobil-menu">
+                <ul class="mobil__list">
+                    <li>
+                        <a class="mobil__menu" href="./index.html"> Студия </a>
+                    </li>
+                    <li>
+                        <a class="mobil__portfolio" href="./portfolio.html"> Портфолио </a>
+                    </li>
+                    <li><a class="mobil__contacts" href=""> Контакты </a></li>
+                </ul>
+            </div>
+            <div class="mobil-info">
+                <ul class="mobil-info__list">
+                    <li class="mobil-info__list__item">
+                        <a href="tel:+380961111111" class="mobil-info__list__tel">
+                +38 096 111 11 11
+              </a>
+                    </li>
+                    <li class="mobil-info__list__item">
+                        <a href="mailto:info@devstudio.com" class="mobil-info__list__mail">
+                info@devstudio.com
+              </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobil-social">
+                <ul class="mobil-social__list">
+                    <li class="mobil-social__item">
+                        <a href="https://www.instagram.com" class="mobil-social__link">
+                Instagram
+              </a>
+                    </li>
+                    <li class="mobil-social__item">
+                        <a href="https://www.twitter.com" class="mobil-social__link">
+                Twitter
+              </a>
+                    </li>
+                    <li class="mobil-social__item">
+                        <a href="https://www.facebook.com" class="mobil-social__link">
+                Facebook
+              </a>
+                    </li>
+                    <li class="mobil-social__item">
+                        <a href="https://www.linkedin.com" class="mobil-social__link">
+                LinkedIn
+              </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal section модалка -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -596,7 +589,6 @@
     </div>
 
     <!-- Script скрипт -->
-
     <script>
         (() => {
             const refs = {
@@ -613,45 +605,9 @@
             }
         })();
     </script>
-    <script>
-        (() => {
-            document
-                .querySelector('.js-speaker-form')
-                .addEventListener('submit', e => {
-                    e.preventDefault();
 
-                    new FormData(e.currentTarget).forEach((value, name) =>
-                        console.log('${name}: ${value}'),
-                    );
-                });
-        })();
-    </script>
-
-    <script src="js/mobile-menu.js">
-        (() => {
-            const mobileMenu = document.querySelector('.js-menu-container');
-            const openMenuBtn = document.querySelector('.js-open-menu');
-            const closeMenuBtn = document.querySelector('.js-close-menu');
-
-            const toggleMenu = () => {
-                const isMenuOpen =
-                    openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-                openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-                mobileMenu.classList.toggle('is-open');
-            };
-
-            openMenuBtn.addEventListener('click', toggleMenu);
-            closeMenuBtn.addEventListener('click', toggleMenu);
-
-            // Закрываем мобильное меню на более широких экранах
-            // в случае изменения ориентации устройства.
-            window.matchMedia('(min-width: 600px)').addEventListener('change', e => {
-                if (!e.matches) return;
-                mobileMenu.classList.remove('is-open');
-                openMenuBtn.setAttribute('aria-expanded', false);
-            });
-        })();
-    </script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
 </body>
 
 </html>

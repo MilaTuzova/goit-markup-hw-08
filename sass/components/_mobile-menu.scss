@@ -1,0 +1,139 @@
+/* мобильное меню */
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: var(--primary-white-color);
+    overflow-y: auto;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform var(--time-duration) var(--cubic-time);
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.button-mobil {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.button-mobil__icon {
+    fill: inherit;
+    transition: fill var(--time-duration) var(--cubic-time);
+    .button-mobil:hover &,
+    .button-mobil:focus-within & {
+        fill: var(--accent-color);
+    }
+}
+
+.mobil-menu-area {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobil__list {
+    margin-bottom: 270px;
+}
+
+.mobil__menu,
+.mobil__portfolio,
+.mobil__contacts {
+    display: block;
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+
+/* подвал мобилки */
+
+.mobil-info {
+    margin-bottom: 64px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: 0.02em;
+    color: transparent var(--time-duration) var(--cubic-time);
+}
+
+.mobil-info__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.mobil-info__list__tel,
+.mobil-info__list__mail {
+    display: block;
+    &:focus,
+    &:hover {
+        color: var(--accent-color);
+        font-size: 34px;
+    }
+}
+
+.mobil-info__list__item {
+    margin-bottom: 32px;
+}
+
+
+/* мобтлка соцсети */
+
+.mobil-social {
+    display: block;
+}
+
+.mobil-social__list {
+    display: inline-flex;
+    @media screen and (max-width: 480px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.mobil-social__item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.122;
+    letter-spacing: 0.02em;
+    @media screen and (max-width: 480px) {
+        margin-bottom: 20px;
+    }
+}
+
+.mobil-social__link {
+    display: block;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--accent-color);
+}
+
+.mobil-social__item {
+    border-right: 1px solid var(--notactiv-color);
+    &:last-child {
+        border: none;
+    }
+}

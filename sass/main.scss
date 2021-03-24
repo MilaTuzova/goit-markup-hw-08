@@ -11,17 +11,4 @@
 @import './components/footer';
 @import './components/modal';
 @import './components/portfolio';
-$primary-text-color: #000000;
-$secont-text-color: #212121;
-$accent-color: #2196f3;
-$notactiv-color: #757575;
-$primary-white-color: #ffffff;
-$button-color: #f5f4fa;
-$footer-backgr-color: #2f303a;
-$social-color: #afb1b8;
-$border-color: #afb1b8;
-$cubic-time: cubic-bezier(0.4, 0, 0.2, 1);
-$time-duration: 250ms;
-$border-color: rgba(33, 33, 33, 0.2);
-$placeholder-color: rgba(117, 117, 117, 0.5);
-$background-color-link: rgba(255, 255, 255, 0.1);
+@import './components/mobile-menu';

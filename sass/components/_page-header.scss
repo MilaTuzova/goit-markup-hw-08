@@ -55,7 +55,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         display: none;
     }
 }
@@ -105,7 +105,7 @@
 /* навигация телефон и почта */
 
 .info {
-    @media screen and (max-width: 769px) {
+    @media screen and (max-width: 767px) {
         display: none;
     }
     @media screen and (min-width: 768px) {
@@ -212,151 +212,29 @@
 
 /* кнопка открытия меню */
 
-.nav-button {
-    display: inline-flex;
+.menu-toggle {
+    min-width: 40px;
+    min-height: 40px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    margin-left: auto;
     cursor: pointer;
     background-color: transparent;
+    outline: none;
     @media screen and (min-width: 768px) {
         display: none;
     }
 }
 
-.nav-button__icon {
+.menu-toggle__icon {
     display: inline-flex;
     fill: var(--primary-text-color);
     transition: fill var(--time-duration) var(--button-color);
-    &:hover,
-    &:focus {
+    .menu-toggle:hover &,
+    .menu-toggle:focus-within & {
         fill: var(--accent-color);
-    }
-}
-
-.nav-button__icon__cross {
-    display: none;
-    /* 
-    .nav-button.is-open & {
-        display: block;
-    }
-    */
-}
-
-.nav-button__icon__menu {
-    display: block;
-    /* 
-     .nav-button.is-open & {
-        display: none;
-    }
-     */
-}
-
-
-/* мобильное меню */
-
-.mobil-container {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 480px;
-    height: 796px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 48px 40px;
-    background-color: #0f0d0dc9;
-    border: 1px solid;
-    /* 
-      &.is-open {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    } 
-    */
-}
-
-.mobil__menu,
-.mobil__portfolio,
-.mobil__contacts {
-    display: inline-block;
-    margin-bottom: 32px;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.175;
-    letter-spacing: 0.02em;
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
-}
-
-
-/* подвал мобилки */
-
-.mobil-footer {
-    display: flex;
-    flex-direction: column;
-}
-
-.mobil-info {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.166;
-    letter-spacing: 0.02em;
-    color: transparent;
-}
-
-.mobil-info__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.mobil-info__list__tel,
-.mobil-info__list__mail {
-    display: block;
-    &:focus,
-    &:hover {
-        color: var(--accent-color);
-        font-size: 34px;
-    }
-}
-
-.mobil-info__list__item {
-    margin-bottom: 32px;
-}
-
-
-/* мобтлка соцсети */
-
-.mobil-social {
-    margin-top: 64px;
-    width: 357px;
-}
-
-.mobil-social__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.mobil-social__item {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.122;
-    letter-spacing: 0.02em;
-}
-
-.mobil-social__link {
-    display: block;
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: var(--accent-color);
-}
-
-.mobil-social__item {
-    border-right: 1px solid var(--notactiv-color);
-    &:last-child {
-        border-right-color: inherit;
     }
 }

@@ -221,7 +221,7 @@ img {
           justify-content: space-between;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .nav-page {
     display: none;
   }
@@ -275,7 +275,7 @@ img {
 }
 
 /* навигация телефон и почта */
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 767px) {
   .info {
     display: none;
   }
@@ -441,24 +441,33 @@ img {
 }
 
 /* кнопка открытия меню */
-.nav-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+.menu-toggle {
+  min-width: 40px;
+  min-height: 40px;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: auto;
   cursor: pointer;
   background-color: transparent;
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
-  .nav-button {
+  .menu-toggle {
     display: none;
   }
 }
 
-.nav-button__icon {
+.menu-toggle__icon {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -467,157 +476,9 @@ img {
   transition: fill var(--time-duration) var(--button-color);
 }
 
-.nav-button__icon:hover, .nav-button__icon:focus {
+.menu-toggle:hover .menu-toggle__icon,
+.menu-toggle:focus-within .menu-toggle__icon {
   fill: var(--accent-color);
-}
-
-.nav-button__icon__cross {
-  display: none;
-  /* 
-    .nav-button.is-open & {
-        display: block;
-    }
-    */
-}
-
-.nav-button__icon__menu {
-  display: block;
-  /* 
-     .nav-button.is-open & {
-        display: none;
-    }
-     */
-}
-
-/* мобильное меню */
-.mobil-container {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 480px;
-  height: 796px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 48px 40px;
-  background-color: #0f0d0dc9;
-  border: 1px solid;
-  /* 
-      &.is-open {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    } 
-    */
-}
-
-.mobil__menu,
-.mobil__portfolio,
-.mobil__contacts {
-  display: inline-block;
-  margin-bottom: 32px;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.175;
-  letter-spacing: 0.02em;
-}
-
-.mobil__menu:hover, .mobil__menu:focus,
-.mobil__portfolio:hover,
-.mobil__portfolio:focus,
-.mobil__contacts:hover,
-.mobil__contacts:focus {
-  color: var(--accent-color);
-}
-
-/* подвал мобилки */
-.mobil-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.mobil-info {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.166;
-  letter-spacing: 0.02em;
-  color: transparent;
-}
-
-.mobil-info__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.mobil-info__list__tel,
-.mobil-info__list__mail {
-  display: block;
-}
-
-.mobil-info__list__tel:focus, .mobil-info__list__tel:hover,
-.mobil-info__list__mail:focus,
-.mobil-info__list__mail:hover {
-  color: var(--accent-color);
-  font-size: 34px;
-}
-
-.mobil-info__list__item {
-  margin-bottom: 32px;
-}
-
-/* мобтлка соцсети */
-.mobil-social {
-  margin-top: 64px;
-  width: 357px;
-}
-
-.mobil-social__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.mobil-social__item {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.122;
-  letter-spacing: 0.02em;
-}
-
-.mobil-social__link {
-  display: block;
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  color: var(--accent-color);
-}
-
-.mobil-social__item {
-  border-right: 1px solid var(--notactiv-color);
-}
-
-.mobil-social__item:last-child {
-  border-right-color: inherit;
 }
 
 /* главная секция */
@@ -2301,5 +2162,183 @@ img {
   .overlay__text {
     width: 370px;
   }
+}
+
+/* мобильное меню */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: var(--primary-white-color);
+  overflow-y: auto;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform var(--time-duration) var(--cubic-time);
+  transition: -webkit-transform var(--time-duration) var(--cubic-time);
+  transition: transform var(--time-duration) var(--cubic-time);
+  transition: transform var(--time-duration) var(--cubic-time), -webkit-transform var(--time-duration) var(--cubic-time);
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.button-mobil {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  min-width: 40px;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.button-mobil__icon {
+  fill: inherit;
+  -webkit-transition: fill var(--time-duration) var(--cubic-time);
+  transition: fill var(--time-duration) var(--cubic-time);
+}
+
+.button-mobil:hover .button-mobil__icon,
+.button-mobil:focus-within .button-mobil__icon {
+  fill: var(--accent-color);
+}
+
+.mobil-menu-area {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mobil__list {
+  margin-bottom: 270px;
+}
+
+.mobil__menu,
+.mobil__portfolio,
+.mobil__contacts {
+  display: block;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+}
+
+.mobil__menu:hover, .mobil__menu:focus,
+.mobil__portfolio:hover,
+.mobil__portfolio:focus,
+.mobil__contacts:hover,
+.mobil__contacts:focus {
+  color: var(--accent-color);
+}
+
+/* подвал мобилки */
+.mobil-info {
+  margin-bottom: 64px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0.02em;
+  color: transparent var(--time-duration) var(--cubic-time);
+}
+
+.mobil-info__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.mobil-info__list__tel,
+.mobil-info__list__mail {
+  display: block;
+}
+
+.mobil-info__list__tel:focus, .mobil-info__list__tel:hover,
+.mobil-info__list__mail:focus,
+.mobil-info__list__mail:hover {
+  color: var(--accent-color);
+  font-size: 34px;
+}
+
+.mobil-info__list__item {
+  margin-bottom: 32px;
+}
+
+/* мобтлка соцсети */
+.mobil-social {
+  display: block;
+}
+
+.mobil-social__list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@media screen and (max-width: 480px) {
+  .mobil-social__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.mobil-social__item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.122;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (max-width: 480px) {
+  .mobil-social__item {
+    margin-bottom: 20px;
+  }
+}
+
+.mobil-social__link {
+  display: block;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--accent-color);
+}
+
+.mobil-social__item {
+  border-right: 1px solid var(--notactiv-color);
+}
+
+.mobil-social__item:last-child {
+  border: none;
 }
 /*# sourceMappingURL=main.css.map */
