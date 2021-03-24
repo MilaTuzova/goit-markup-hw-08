@@ -234,16 +234,20 @@
 
 .nav-button__icon__cross {
     display: none;
-    /* .nav-button.is-open & {
+    /* 
+    .nav-button.is-open & {
         display: block;
-    }*/
+    }
+    */
 }
 
 .nav-button__icon__menu {
     display: block;
-    /*  .nav-button.is-open & {
+    /* 
+     .nav-button.is-open & {
         display: none;
-    } */
+    }
+     */
 }
 
 
@@ -261,11 +265,13 @@
     padding: 48px 40px;
     background-color: #0f0d0dc9;
     border: 1px solid;
-    /*   &.is-open {
+    /* 
+      &.is-open {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    } */
+    } 
+    */
 }
 
 .mobil__menu,
