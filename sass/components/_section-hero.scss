@@ -24,7 +24,6 @@
             background-image: linear-gradient( rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('../images/img/hero-mobil@2x.jpg');
         }
     }
-    ;
     @media screen and (min-width: 768px) {
         padding-top: 118px;
         padding-bottom: 118px;
@@ -36,7 +35,6 @@
             background-image: linear-gradient( rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('../images/img/hero-lap@2x.jpg');
         }
     }
-    ;
     @media screen and (min-width: 1200px) {
         padding-top: 200px;
         padding-bottom: 210px;
@@ -66,14 +64,12 @@
         font-size: 26px;
         line-height: 1.615;
     }
-    ;
     @media screen and (min-width: 480px) and (max-width: 1199px) {
         margin: 0 auto;
         width: 360px;
         font-size: 26px;
         line-height: 1.615;
     }
-    ;
     @media screen and (min-width: 1200px) {
         margin: 0 auto;
         width: 696px;
