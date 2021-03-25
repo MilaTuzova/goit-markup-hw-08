@@ -3,13 +3,14 @@
 .section-main {
     text-align: center;
     background-color: var(--footer-backgr-color);
-    max-width: 400px;
-    padding: 118px;
+    width: auto;
+    height: auto;
+    padding-top: 118px;
     padding-bottom: 118px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient (rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('/images/img/hero-mobil@1x.jpg');
-    background-size: cover;
+    background-image: linear-gradient(rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('/images/img/hero-mobil@1x.jpg');
+    background-size: auto;
     background-repeat: no-repeat;
     background-position: center;
     @media screen and (min-width: 480px) {
@@ -17,9 +18,9 @@
         padding-bottom: 118px;
         width: 480px;
         height: 400px;
-        background-image: linear-gradient (rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('/images/img/hero-mobil@1x.jpg');
+        background-image: linear-gradient(rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('/images/img/hero-mobil@1x.jpg');
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: linear-gradient (rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('/images/img/hero-mobil@2x.jpg');
+            background-image: linear-gradient(rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('/images/img/hero-mobil@2x.jpg');
         }
     }
     @media screen and (min-width: 768px) {
@@ -27,9 +28,9 @@
         padding-bottom: 118px;
         width: 768px;
         height: 400px;
-        background-image: linear-gradient (rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('/images/img/hero-lap@1x.jpg');
+        background-image: linear-gradient(rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('/images/img/hero-lap@1x.jpg');
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: linear-gradient (rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('/images/img/hero-lap@2x.jpg');
+            background-image: linear-gradient(rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('/images/img/hero-lap@2x.jpg');
         }
     }
     @media screen and (min-width: 1200px) {
@@ -46,19 +47,27 @@
 
 .section-main__title {
     display: block;
-    margin: 0 auto;
+    margin-top: 0;
     font-weight: 900;
     color: var(--primary-white-color);
     letter-spacing: 0.06em;
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 30px;
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 479px) {
+        margin: 0 auto;
+        max-width: 100%;
+        font-size: 26px;
+        line-height: 1.615;
+    }
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        margin: 0 auto;
         width: 360px;
         font-size: 26px;
         line-height: 1.615;
     }
     @media screen and (min-width: 1200px) {
+        margin: 0 auto;
         width: 696px;
         font-size: 44px;
         line-height: 1.363;

@@ -29,6 +29,7 @@
 .client {
     height: 90px;
     @media screen and (max-width: 479px) {
+        width: auto;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 30px;
@@ -53,11 +54,13 @@
 .client__link {
     display: inline-block;
     height: 90px;
+    width: auto;
 }
 
 .client__icon {
     display: inline-block;
     height: 90px;
+    width: auto;
     cursor: pointer;
     border: 1px solid var(--social-color);
     border-radius: 4px;
