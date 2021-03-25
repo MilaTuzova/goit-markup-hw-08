@@ -20,10 +20,11 @@
         height: 400px;
         background-size: 480px 400px;
         background-image: linear-gradient( rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('../images/img/hero-mobil@1x.jpg');
-        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
             background-image: linear-gradient( rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('../images/img/hero-mobil@2x.jpg');
         }
     }
+    ;
     @media screen and (min-width: 768px) {
         padding-top: 118px;
         padding-bottom: 118px;
@@ -31,29 +32,23 @@
         height: 400px;
         background-size: 768px 400px;
         background-image: linear-gradient( rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('../images/img/hero-lap@1x.jpg');
-        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
             background-image: linear-gradient( rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('../images/img/hero-lap@2x.jpg');
         }
     }
+    ;
     @media screen and (min-width: 1200px) {
         padding-top: 200px;
         padding-bottom: 210px;
         width: 1600px;
         height: 600px;
         background-size: 1600px 600px;
+        background-image: linear-gradient( rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url('../images/img/hero@1x.jpg');
         @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-            background-image: url('/images/img/img-hero@2x.jpg');
+            background-image: url('/images/img/hero@2x.jpg');
         }
-        background-image: linear-gradient( rgba(83,
-        84,
-        95,
-        0.4),
-        rgba(83,
-        84,
-        95,
-        0.4)),
-        url('../images/img/img-hero@1x.jpg');
     }
+    ;
 }
 
 .section-main__title {
@@ -71,18 +66,21 @@
         font-size: 26px;
         line-height: 1.615;
     }
+    ;
     @media screen and (min-width: 480px) and (max-width: 1199px) {
         margin: 0 auto;
         width: 360px;
         font-size: 26px;
         line-height: 1.615;
     }
+    ;
     @media screen and (min-width: 1200px) {
         margin: 0 auto;
         width: 696px;
         font-size: 44px;
         line-height: 1.363;
     }
+    ;
 }
 
 .section-main__button {

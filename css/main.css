@@ -543,14 +543,14 @@ img {
     width: 1600px;
     height: 600px;
     background-size: 1600px 600px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(83, 84, 95, 0.4)), to(rgba(83, 84, 95, 0.4))), url("../images/img/img-hero@1x.jpg");
-    background-image: linear-gradient(rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url("../images/img/img-hero@1x.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(83, 84, 95, 0.4)), to(rgba(83, 84, 95, 0.4))), url("../images/img/hero@1x.jpg");
+    background-image: linear-gradient(rgba(83, 84, 95, 0.4), rgba(83, 84, 95, 0.4)), url("../images/img/hero@1x.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .section-main {
-    background-image: url("/images/img/img-hero@2x.jpg");
+    background-image: url("/images/img/hero@2x.jpg");
   }
 }
 
