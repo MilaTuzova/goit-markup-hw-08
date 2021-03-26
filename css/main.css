@@ -2242,7 +2242,6 @@ img {
   height: 100vh;
   padding: 48px 40px;
   background-color: var(--primary-white-color);
-  overflow-y: auto;
   z-index: 999;
   -webkit-transform: translateX(300%);
           transform: translateX(300%);
@@ -2312,6 +2311,7 @@ img {
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
+  cursor: pointer;
 }
 
 .mobil__menu:hover, .mobil__menu:focus,
@@ -2319,6 +2319,10 @@ img {
 .mobil__portfolio:focus,
 .mobil__contacts:hover,
 .mobil__contacts:focus {
+  color: var(--accent-color);
+}
+
+.mobil-current {
   color: var(--accent-color);
 }
 
@@ -2334,10 +2338,11 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 .mobil-info {
-  margin-bottom: 64px;
+  margin-bottom: 44px;
   font-weight: 500;
   font-size: 24px;
   line-height: 1.166;
@@ -2358,24 +2363,21 @@ img {
           justify-content: flex-start;
 }
 
-.mobil-info__list__tel,
-.mobil-info__list__mail {
-  display: block;
+.mobil-info__list__tel {
+  font-size: 34px;
+  color: var(--accent-color);
 }
 
-.mobil-info__list__tel:focus, .mobil-info__list__tel:hover,
-.mobil-info__list__mail:focus,
-.mobil-info__list__mail:hover {
-  color: var(--accent-color);
-  font-size: 34px;
+.mobil-info__list__mail {
+  font-size: 24px;
 }
 
 .mobil-info__list__item {
-  margin-bottom: 32px;
+  margin-top: 12px;
 }
 
-.mobil-info__list__item:last-child {
-  margin-bottom: 0;
+.mobil-info__list__item:first-child {
+  margin-top: 0;
 }
 
 /* мобтлка соцсети */
