@@ -43,12 +43,10 @@
 }
 
 .mobil-menu-area {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.mobil__list {
-    margin-bottom: 270px;
+    height: 100vh;
 }
 
 .mobil__menu,
@@ -68,6 +66,12 @@
 
 
 /* подвал мобилки */
+
+.mobil-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .mobil-info {
     margin-bottom: 64px;
@@ -96,6 +100,9 @@
 
 .mobil-info__list__item {
     margin-bottom: 32px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 

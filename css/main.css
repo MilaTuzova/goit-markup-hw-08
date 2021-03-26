@@ -54,29 +54,33 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  background-size: cover;
 }
 
 .container {
+  max-width: 480px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -147,6 +151,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .nav {
@@ -485,10 +491,9 @@ img {
 .section-main {
   text-align: center;
   background-color: var(--footer-backgr-color);
-  width: auto;
-  height: auto;
   padding-top: 118px;
   padding-bottom: 118px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(83, 84, 95, 0.4)), to(rgba(83, 84, 95, 0.4))), url("../images/img/hero-mobil@1x.jpg");
@@ -502,7 +507,7 @@ img {
   .section-main {
     padding-top: 118px;
     padding-bottom: 118px;
-    width: 480px;
+    max-width: 480px;
     height: 400px;
     background-size: 480px 400px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(83, 84, 95, 0.4)), to(rgba(83, 84, 95, 0.4))), url("../images/img/hero-mobil@1x.jpg");
@@ -521,7 +526,7 @@ img {
   .section-main {
     padding-top: 118px;
     padding-bottom: 118px;
-    width: 768px;
+    max-width: 768px;
     height: 400px;
     background-size: 768px 400px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(83, 84, 95, 0.4)), to(rgba(83, 84, 95, 0.4))), url("../images/img/hero-lap@1x.jpg");
@@ -540,7 +545,7 @@ img {
   .section-main {
     padding-top: 200px;
     padding-bottom: 210px;
-    width: 1600px;
+    max-width: 1600px;
     height: 600px;
     background-size: 1600px 600px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(83, 84, 95, 0.4)), to(rgba(83, 84, 95, 0.4))), url("../images/img/hero@1x.jpg");
@@ -2285,6 +2290,9 @@ img {
 }
 
 .mobil-menu-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2292,10 +2300,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.mobil__list {
-  margin-bottom: 270px;
+  height: 100vh;
 }
 
 .mobil__menu,
@@ -2318,6 +2323,19 @@ img {
 }
 
 /* подвал мобилки */
+.mobil-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .mobil-info {
   margin-bottom: 64px;
   font-weight: 500;
@@ -2354,6 +2372,10 @@ img {
 
 .mobil-info__list__item {
   margin-bottom: 32px;
+}
+
+.mobil-info__list__item:last-child {
+  margin-bottom: 0;
 }
 
 /* мобтлка соцсети */
