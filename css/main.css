@@ -1636,8 +1636,8 @@ img {
 
 @media screen and (min-width: 1200px) {
   .modal {
-    min-width: 528px;
-    min-height: 581px;
+    width: 528px;
+    height: 581px;
   }
 }
 
@@ -1672,9 +1672,21 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  width: 528px;
-  height: 581px;
-  padding: 37px 41px 43px 39px;
+  padding: 40px;
+}
+
+@media screen and (max-width: 1199px) {
+  .field {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .field {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .field__text {
@@ -1864,7 +1876,7 @@ img {
 
 @media screen and (max-width: 1199px) {
   .agreement {
-    padding-left: 22px;
+    padding-left: 20px;
   }
 }
 
@@ -1885,6 +1897,7 @@ img {
   .checkbox {
     font-size: 12px;
     line-height: 1.1666;
+    padding-left: -2px;
   }
 }
 
@@ -1893,7 +1906,7 @@ img {
     width: 423px;
     font-size: 14px;
     line-height: 1.7;
-    padding-left: 19px;
+    padding-left: 15px;
   }
 }
 
@@ -1939,15 +1952,7 @@ img {
 }
 
 .button-send {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
@@ -2384,6 +2389,7 @@ img {
 /* мобтлка соцсети */
 .mobil-social {
   display: block;
+  margin-left: -10px;
 }
 
 .mobil-social__list {
